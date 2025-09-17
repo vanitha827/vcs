@@ -9,6 +9,7 @@ const getTaskById = (id) => tasks.find(t => t.id === id);
 
 const addTask = (task) => {
   task.id = tasks.length + 1;
+
   tasks.push(task);
   return task;
 };
