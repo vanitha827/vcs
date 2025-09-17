@@ -28,6 +28,7 @@ const deleteTask = (id) => {
   if (index !== -1) {
 
     return tasks.splice(index, 1)[0];
+
   }
   return null;
 };
