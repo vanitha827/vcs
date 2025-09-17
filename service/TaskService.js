@@ -18,6 +18,7 @@ const updateTask = (id, updatedTask) => {
   if (index !== -1) {
     tasks[index] = { ...tasks[index], ...updatedTask };
     return tasks[index];
+
   }
   return null;
 };
