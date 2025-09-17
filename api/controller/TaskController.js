@@ -5,11 +5,8 @@ const getAllTasks = (req, res) => {
 };
 
 const getTask = (req, res) => {
-
   const task = taskService.getTaskById(parseInt(req.params.id));
-
   if (task) res.json(task);
-
   else res.status(404).json({ message: "Task not found" });
 };
 
@@ -20,7 +17,6 @@ const createTask = (req, res) => {
 
 const updateTask = (req, res) => {
   const updated = taskService.updateTask(parseInt(req.params.id), req.body);
-
   if (updated) res.json(updated);
   else res.status(404).json({ message: "Task not found" });
 };
