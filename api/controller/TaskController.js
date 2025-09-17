@@ -6,6 +6,7 @@ const getAllTasks = (req, res) => {
 
 const getTask = (req, res) => {
   const task = taskService.getTaskById(parseInt(req.params.id));
+
   if (task) res.json(task);
   else res.status(404).json({ message: "Task not found" });
 };
