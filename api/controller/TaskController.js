@@ -17,6 +17,7 @@ const createTask = (req, res) => {
 
 const updateTask = (req, res) => {
   const updated = taskService.updateTask(parseInt(req.params.id), req.body);
+
   if (updated) res.json(updated);
   else res.status(404).json({ message: "Task not found" });
 };
