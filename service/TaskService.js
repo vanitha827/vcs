@@ -16,6 +16,7 @@ const addTask = (task) => {
 const updateTask = (id, updatedTask) => {
   const index = tasks.findIndex(t => t.id === id);
   if (index !== -1) {
+
     tasks[index] = { ...tasks[index], ...updatedTask };
     return tasks[index];
   }
